@@ -13,33 +13,21 @@
     </h1>
   </div>
 
-  <div>
-    <p>
-      published: aaaa
-    </p>
-    <h2>
-      <a href="">
-        My First Project
-      </a>
-    </h2>
-    <p>
-      Hello World.
-    </p>
-  </div>
+  {% for post in posts %}
+    <div>
+      <p>
+        published: {{ post.published_date }}
+      </p>
+      <p>
+        <a href="">
+          {{ post.title  }}
+        </a>
+      </p>
+      <p>
+        {{ post.text|linebreaksbr }}
+      </p>
+    </div>
+  {% endfor %}
 
-  <div>
-    <p>
-      published: bbbb
-    </p>
-    <h2>
-      <a href="">
-        My Second Project
-      </a>
-    </h2>
-    <p>
-      Hello World.
-    </p>
-  </div>
-  
 </body>
 </html>
